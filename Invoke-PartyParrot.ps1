@@ -263,6 +263,7 @@ while ($true) {
 
     # Stop the party when 'q' is pressed to go back to work
     if ($Host.UI.RawUI.KeyAvailable -and ("q" -eq $Host.UI.RawUI.ReadKey("IncludeKeyUp,NoEcho").Character)) {
-      break;
+      Clear-Host
+      break
     }
 }
