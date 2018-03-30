@@ -1,9 +1,11 @@
 <#
 .SYNOPSIS
-This cmdlet brings the party to PowerShell with PartyParrot!
+This cmdlet brings the party to PowerShell with PartyParrot! Press 'q' to quit.
 
 .DESCRIPTION
 The cmdlet renders numerous frames of ASCII art in various colors to create a moving image.
+
+Press 'q' to quit
 
 .EXAMPLE
 ./Invoke-PartyParrot.ps1
@@ -248,7 +250,7 @@ while ($true) {
     Write-Host -ForegroundColor $colors[$colorIndex] $parrotFrames[$parrotIndex]
 
     # Hold the render in place until time to clear and move on to the new frame
-    Start-Sleep -Milliseconds 120
+    Start-Sleep -Milliseconds 75
     Clear-Host
 
     # Increment the index of the frame array. If at the end of the array, begin again
